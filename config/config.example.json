@@ -1,0 +1,21 @@
+{
+	"nextcloud": {
+		"config_type": "webdav",
+		"url": "https://nextcloud.example.com/remote.php/dav/files/user/",
+		"vendor": "nextcloud",
+		"user": "user",
+		"password": "application_password",
+		"backups": [
+			{
+				"local": "C:\\Users\\thibaut\\Documents\\Nextcloud\\ww",
+				"remote": "Windows/WW",
+				"name": "WW"
+			},
+			{
+				"local": "C:\\Users\\thibaut\\Documents\\tt",
+				"remote": "Windows/tt",
+				"name": "DocsPerso"
+			}
+		]
+	}
+}
