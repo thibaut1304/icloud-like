@@ -62,13 +62,17 @@ def setup_watchman():
 				continue
 
 
-			# Définir trigger pour tout fichier dans le dossier watch
+			# Définir trigger pour tout fichier dans le dossier watch sauf le fichier de log pour les boucles :)
 			trigger_definition = [
 				"trigger",
 				local_path,
 				{
 					"name": trigger_name,
-					"expression": ["true"],
+					"expression": [
+						"allof",
+						["type", "f"],
+						["not", ["match", "icloud_sync.log"]]
+					],
 					"command": ["cmd.exe", "/c", bat_path]
 				}
 			]
